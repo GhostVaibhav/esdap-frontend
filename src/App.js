@@ -1,8 +1,13 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AnalysisWindow from "./screens/AnalysisWindow";
+
 function App() {
 	return (
-		<div className="App">
-			<h1 className="text-3xl font-bold underline">ESDAP</h1>
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/input" element={<AnalysisWindow />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
