@@ -1,20 +1,45 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import image from "../images/your-paragraph-text.png";
 import "animate.css";
+import { useRecoilState } from "recoil";
+import {
+	academicScoresAtom,
+	attendancePercentageAtom,
+	extracurricularActivitiesAtom,
+	basicFitnessScoresAtom,
+	teamworkSkillScoresAtom,
+	recommendationLettersAtom,
+	researchExperienceAtom,
+} from "../recoil/studentAtoms.js";
 
 const StudentDetailsForm = () => {
-	const [academicScores, setAcademicScores] = useState("");
-	const [attendancePercentage, setAttendancePercentage] = useState("");
+	const navigate = useNavigate();
+	const [academicScores, setAcademicScores] =
+		useRecoilState(academicScoresAtom);
+	const [attendancePercentage, setAttendancePercentage] = useRecoilState(
+		attendancePercentageAtom
+	);
 	const [extracurricularActivities, setExtracurricularActivities] =
-		useState("");
-	const [basicFitnessScores, setBasicFitnessScores] = useState("");
-	const [teamworkSkillScores, setTeamworkSkillScores] = useState("");
-	const [recommendationLetters, setRecommendationLetters] = useState("");
-	const [researchExperience, setResearchExperience] = useState("");
+		useRecoilState(extracurricularActivitiesAtom);
+	const [basicFitnessScores, setBasicFitnessScores] = useRecoilState(
+		basicFitnessScoresAtom
+	);
+	const [teamworkSkillScores, setTeamworkSkillScores] = useRecoilState(
+		teamworkSkillScoresAtom
+	);
+	const [recommendationLetters, setRecommendationLetters] = useRecoilState(
+		recommendationLettersAtom
+	);
+	const [researchExperience, setResearchExperience] = useRecoilState(
+		researchExperienceAtom
+	);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log("Form submitted!");
+		navigate('/result')
 	};
 
 	return (
@@ -22,15 +47,15 @@ const StudentDetailsForm = () => {
 			<div className="md:ml-20 md:mt-20 mb-10 md:mb-0 animate__animated animate__pulse ">
 				<img src={image} alt="Enter Student Details" />
 			</div>
-			<div className="max-w-2xl md:max-w-xl lg:max-w-lg md:mr-20 md:my-10 dark:bg-gray-800 py-12 px-14 mx-10 rounded-3xl shadow-2xl animate__animated animate__fadeIn ">
-				<h2 className="text-4xl font-semibold mb-9 text-white">
+			<div className="max-w-2xl md:max-w-xl lg:max-w-lg md:mr-20 md:my-10 dark:bg-gray-800 py-8 px-14 mx-10 rounded-3xl shadow-2xl animate__animated animate__fadeIn ">
+				<h2 className="text-3xl font-semibold mb-4 text-white">
 					Fill Details
 				</h2>
 				<form onSubmit={handleSubmit}>
 					<div className="mb-4">
 						<label
 							htmlFor="academicScores"
-							className="block font-medium mb-1 text-slate-300 "
+							className="block text-sm mb-1 text-slate-300 "
 						>
 							Academic Scores:
 						</label>
@@ -46,7 +71,7 @@ const StudentDetailsForm = () => {
 					<div className="mb-4">
 						<label
 							htmlFor="attendancePercentage"
-							className="block font-medium mb-1 text-slate-300"
+							className="block text-sm mb-1 text-slate-300"
 						>
 							Attendance Percentage (%):
 						</label>
@@ -64,7 +89,7 @@ const StudentDetailsForm = () => {
 					<div className="mb-4">
 						<label
 							htmlFor="extracurricularActivities"
-							className="block font-medium mb-1 text-slate-300"
+							className="block text-sm mb-1 text-slate-300"
 						>
 							Extracurricular Activities:
 						</label>
@@ -81,7 +106,7 @@ const StudentDetailsForm = () => {
 					<div className="mb-4">
 						<label
 							htmlFor="basicFitnessScores"
-							className="block font-medium mb-1 text-slate-300"
+							className="block text-sm mb-1 text-slate-300"
 						>
 							Basic Fitness Scores:
 						</label>
@@ -99,7 +124,7 @@ const StudentDetailsForm = () => {
 					<div className="mb-4">
 						<label
 							htmlFor="teamworkSkillScores"
-							className="block font-medium mb-1 text-slate-300"
+							className="block text-sm mb-1 text-slate-300"
 						>
 							Teamwork Skill Scores (Out of 5):
 						</label>
@@ -117,7 +142,7 @@ const StudentDetailsForm = () => {
 					<div className="mb-4">
 						<label
 							htmlFor="recommendationLetters"
-							className="block font-medium mb-1 text-slate-300"
+							className="block text-sm mb-1 text-slate-300"
 						>
 							Recommendation Letters (Out of 5):
 						</label>
@@ -135,7 +160,7 @@ const StudentDetailsForm = () => {
 					<div className="mb-4">
 						<label
 							htmlFor="researchExperience"
-							className="block font-medium mb-1 text-slate-300"
+							className="block text-sm mb-1 text-slate-300"
 						>
 							Research Experience (Out of 5):
 						</label>
