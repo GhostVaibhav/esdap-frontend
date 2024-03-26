@@ -14,7 +14,6 @@ const StudentDetailsForm = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// Perform form submission logic here
 		console.log("Form submitted!");
 	};
 

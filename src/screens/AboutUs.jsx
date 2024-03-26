@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import AboutCard from "../components/AboutCard";
 const AboutUsWindow = () => {
 	return (
 		<>
@@ -6,7 +7,8 @@ const AboutUsWindow = () => {
 				className=" dark:bg-gray-900"
 				style={{ fontFamily: "Poppins" }}
 			>
-				<Navbar activeLink="/aboutus" />
+				<Navbar />
+				<AboutCard />
 			</div>
 		</>
 	);

@@ -7,7 +7,7 @@ const AdminWindow = () => {
 				className=" dark:bg-gray-900"
 				style={{ fontFamily: "Poppins" }}
 			>
-				<Navbar activeLink="/admin"/>
+				<Navbar/>
 			</div>
 		</>
 	);

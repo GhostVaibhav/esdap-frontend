@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import ResultCard from "../components/ResultCard";
 const ResultWindow = () => {
 	return (
 		<>
@@ -6,7 +7,8 @@ const ResultWindow = () => {
 				className=" dark:bg-gray-900"
 				style={{ fontFamily: "Poppins" }}
 			>
-				<Navbar activeLink="/aboutus" />
+				<Navbar />
+				<ResultCard />
 			</div>
 		</>
 	);

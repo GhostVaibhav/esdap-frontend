@@ -7,7 +7,7 @@ const Home = () => {
 				className=" dark:bg-gray-900"
 				style={{ fontFamily: "Poppins" }}
 			>
-				<Navbar activeLink="/aboutus" />
+				<Navbar/>
 			</div></>;
 };
 
