@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useRecoilValue } from "recoil";
 import { atoms } from "../recoil/studentAtoms.js";
+
 const {
 	academicScoresAtom,
 	attendancePercentageAtom,
@@ -24,81 +25,90 @@ const ResultCard = () => {
 	const researchExperience = useRecoilValue(researchExperienceAtom);
 	return (
 		<>
-			<div className="flex flex-col md:flex-row justify-evenly">
-				<div>
-					<div className="max-w-xl lg:max-w-xl md:max-w-lg  md:my-6 dark:bg-gray-800 py-6 px-10 mx-10 rounded-2xl shadow-xl">
-						<div className="text-xl font-bold  mb-6 text-slate-300">
-							Result Score Dashboard
-						</div>
+			<div className="flex flex-col md:flex-row justify-center">
+				<div className="max-w-xl lg:max-w-xl md:max-w-lg md:my-20  p-10 px-10 m-20 rounded-2xl shadow-2xl shadow-black animate__animated animate__fadeIn">
+					<div className="text-xl font-bold mb-6 text-white">
+						Result Score Dashboard
+					</div>
 
-						<div className="flex flex-row justify-between items-center mb-8">
-							<h3 className="text-md  text-slate-300">
-								Academic Scores -
-							</h3>
-							<span className="text-md  text-blue-500">
-								{academicScores}
-							</span>
-						</div>
+					{/* Academic Scores */}
+					<div className="flex flex-row justify-between items-center mb-4">
+						<h3 className="text-sm text-slate-300">
+							Academic Scores -
+						</h3>
+						<span className="text-sm text-white">
+							{academicScores}
+						</span>
+					</div>
 
-						<div className="flex flex-row justify-between items-center mb-8">
-							<h3 className="text-md  text-slate-300">
-								Attendance Percentage -
-							</h3>
-							<span className="text-md  text-blue-500">
-								{attendancePercentage}
-							</span>
-						</div>
+					{/* Attendance Percentage */}
+					<div className="flex flex-row justify-between items-center mb-4">
+						<h3 className="text-sm text-slate-300">
+							Attendance Percentage -
+						</h3>
+						<span className="text-sm text-white">
+							{attendancePercentage}
+						</span>
+					</div>
 
-						<div className="flex flex-row justify-between items-center mb-8">
-							<h3 className="text-md  text-slate-300">
-								Extracurricular Activities -
-							</h3>
-							<span className="text-md  text-blue-500">
-								{extracurricularActivities}
-							</span>
-						</div>
+					{/* Extracurricular Activities */}
+					<div className="flex flex-row justify-between items-center mb-4">
+						<h3 className="text-sm text-slate-300">
+							Extracurricular Activities -
+						</h3>
+						<span className="text-sm text-white">
+							{extracurricularActivities}
+						</span>
+					</div>
 
-						<div className="flex flex-row justify-between items-center mb-8">
-							<h3 className="text-md  text-slate-300">
-								Basic Fitness Scores -
-							</h3>
-							<span className="text-md  text-blue-500">
-								{basicFitnessScores}
-							</span>
-						</div>
-						<div className="flex flex-row justify-between items-center mb-8">
-							<h3 className="text-md  text-slate-300">
-								Teamwork Skill Scores -
-							</h3>
-							<span className="text-md  text-blue-500">
-								{teamworkSkillScores}
-							</span>
-						</div>
-						<div className="flex flex-row justify-between items-center mb-8">
-							<h3 className="text-md  text-slate-300">
-								Research Experience -
-							</h3>
-							<span className="text-md  text-blue-500">
-								{researchExperience}
-							</span>
-						</div>
-						<div className="flex flex-row justify-between items-center mb-8">
-							<h3 className="text-md  text-slate-300">
-								Recommendation Letters -
-							</h3>
-							<span className="text-md  text-blue-500">
-								{recommendationLetters}
-							</span>
-						</div>
+					{/* Basic Fitness Scores */}
+					<div className="flex flex-row justify-between items-center mb-4">
+						<h3 className="text-sm text-slate-300">
+							Basic Fitness Scores -
+						</h3>
+						<span className="text-sm text-white">
+							{basicFitnessScores}
+						</span>
+					</div>
+
+					{/* Teamwork Skill Scores */}
+					<div className="flex flex-row justify-between items-center mb-4">
+						<h3 className="text-sm text-slate-300">
+							Teamwork Skill Scores -
+						</h3>
+						<span className="text-sm text-white">
+							{teamworkSkillScores}
+						</span>
+					</div>
+
+					{/* Research Experience */}
+					<div className="flex flex-row justify-between items-center mb-4">
+						<h3 className="text-sm text-slate-300">
+							Research Experience -
+						</h3>
+						<span className="text-sm text-white">
+							{researchExperience}
+						</span>
+					</div>
+
+					{/* Recommendation Letters */}
+					<div className="flex flex-row justify-between items-center mb-4">
+						<h3 className="text-sm text-slate-300">
+							Recommendation Letters -
+						</h3>
+						<span className="text-sm text-white">
+							{recommendationLetters}
+						</span>
 					</div>
 				</div>
-				<div className="max-w-full lg:max-w-xl md:max-w-lg 	my-6 dark:bg-gray-800 py-6 px-10 mx-10 rounded-xl shadow-xl">
-					<div className="text-xl font-bold  mb-6 text-slate-300">
+
+				<div className="max-w-full lg:max-w-xl md:max-w-lg md:my-auto p-10 mx-10 rounded-xl shadow-2xl shadow-black animate__animated animate__fadeIn">
+					<div className="text-xl font-bold mb-6 text-white">
 						Final Score
 					</div>
 					<div className="flex flex-row items-center">
-						<h3 className="text-md  text-slate-300">Score -</h3>
-						<span className="text-md  text-blue-500">{}</span>
+						<h3 className="text-sm text-slate-300">Score -</h3>
+						<span className="text-sm text-white">{}</span>
 					</div>
 				</div>
 			</div>

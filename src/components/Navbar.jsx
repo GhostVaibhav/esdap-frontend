@@ -4,10 +4,13 @@ const Navbar = () => {
 	};
 	return (
 		<>
-			<header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-3 px-20 dark:bg-gray-800">
+			<header
+				className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-3 px-20"
+				style={{ backgroundColor: "rgb(13, 18, 26)" }}
+			>
 				<nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
 					<a
-						className="flex-none text-2xl font-semibold dark:text-white"
+						className="flex-none text-xl font-semibold dark:text-white"
 						href="/home"
 					>
 						ESDAP

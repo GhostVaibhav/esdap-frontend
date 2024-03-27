@@ -1,7 +1,7 @@
 const FAQCard = ({ question, answer }) => {
 	return (
 		<>
-			<div className="max-w-2xl mx-auto divide-y divide-gray-200 dark:divide-gray-700">
+			<div className="max-w-2xl mx-auto divide-y divide-gray-200 dark:divide-gray-700 animate__animated animate__fadeIn">
 				<div className="py-8 first:pt-0 last:pb-0">
 					<div className="flex gap-x-5">
 						<svg
