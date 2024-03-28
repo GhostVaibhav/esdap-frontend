@@ -5,7 +5,7 @@ const Navbar = () => {
 	return (
 		<>
 			<header
-				className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-3 px-20"
+				className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-3 px-20 "
 				style={{ backgroundColor: "rgb(13, 18, 26)" }}
 			>
 				<nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
@@ -19,11 +19,11 @@ const Navbar = () => {
 						<a
 							className="font-medium"
 							style={{
-								color: isActiveLink("/analysis")
+								color: isActiveLink("/")
 									? "rgb(59 130 246)"
 									: "rgb(156 163 175)",
 							}}
-							href="/analysis"
+							href="/"
 						>
 							Analysis
 						</a>

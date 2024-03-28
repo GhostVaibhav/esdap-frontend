@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import AboutCard from "../components/AboutCard";
+import Footer from "../components/Footer";
 const AboutUsWindow = () => {
 	return (
 		<>
@@ -9,6 +10,7 @@ const AboutUsWindow = () => {
 			>
 				<Navbar />
 				<AboutCard />
+				<Footer />
 			</div>
 		</>
 	);

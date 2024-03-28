@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ResultCard from "../components/ResultCard";
 const ResultWindow = () => {
@@ -9,6 +10,7 @@ const ResultWindow = () => {
 			>
 				<Navbar />
 				<ResultCard />
+				<Footer />
 			</div>
 		</>
 	);

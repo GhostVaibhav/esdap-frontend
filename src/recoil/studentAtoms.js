@@ -2,36 +2,40 @@ import { atom } from "recoil";
 
 export const academicScoresAtom = atom({
 	key: "academicScoresState",
-	default: "",
+	default: [],
 });
 
 export const attendancePercentageAtom = atom({
 	key: "attendancePercentageState",
-	default: "",
+	default: [],
 });
 
 export const extracurricularActivitiesAtom = atom({
 	key: "extracurricularActivitiesState",
-	default: "",
+	default: [],
 });
 
 export const basicFitnessScoresAtom = atom({
 	key: "basicFitnessScoresState",
-	default: "",
+	default: [],
 });
 
 export const teamworkSkillScoresAtom = atom({
 	key: "teamworkSkillScoresState",
-	default: "",
+	default: [],
 });
 
 export const recommendationLettersAtom = atom({
 	key: "recommendationLettersState",
-	default: "",
+	default: [],
 });
 
 export const researchExperienceAtom = atom({
 	key: "researchExperienceState",
+	default: [],
+});
+export const finalScoreAtom = atom({
+	key: "finalScore",
 	default: "",
 });
 
@@ -43,4 +47,5 @@ export const atoms = {
 	teamworkSkillScoresAtom,
 	recommendationLettersAtom,
 	researchExperienceAtom,
+	finalScoreAtom,
 };
