@@ -2,7 +2,7 @@ const Footer = () => {
 	return (
 		<>
 			<footer
-				className="w-ful text-white py-3"
+				className="mt-auto w-full text-white py-3"
 				style={{ backgroundColor: "rgb(13, 18, 26)" }}
 			>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

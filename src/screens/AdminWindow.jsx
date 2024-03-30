@@ -5,7 +5,7 @@ const AdminWindow = () => {
 	return (
 		<>
 			<div
-				className=" dark:bg-gray-900"
+				className="flex flex-col min-h-screen dark:bg-gray-900"
 				style={{ fontFamily: "Poppins" }}
 			>
 				<Navbar />

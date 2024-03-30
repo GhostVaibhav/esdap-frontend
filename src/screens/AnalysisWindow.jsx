@@ -4,10 +4,10 @@ import Footer from "../components/Footer";
 
 const AnalysisWindow = () => {
 	return (
-		<div className=" dark:bg-gray-900" style={{ fontFamily: "Poppins" }}>
+		<div className="flex flex-col min-h-screen dark:bg-gray-900" style={{ fontFamily: "Poppins" }}>
 			<Navbar />
 			<StudentDetailsForm />
-			<Footer/>
+			<Footer />
 		</div>
 	);
 };
