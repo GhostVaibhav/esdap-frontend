@@ -8,7 +8,7 @@ const Footer = () => {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex justify-between items-center">
 						<p className="text-sm">
-							&copy; 2024 Your Company Name. All rights reserved.
+							&copy; 2024 ESDAP. All rights reserved.
 						</p>
 						<div className="flex gap-5">
 							<a href="/" className="text-sm hover:text-gray-400">
