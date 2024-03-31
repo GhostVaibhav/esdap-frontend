@@ -66,10 +66,10 @@ const StudentDetailsForm = () => {
 
 	return (
 		<div className="flex flex-col md:flex-row ">
-			<div className="mt-4 mx-6  animate__animated animate__pulse  ">
+			<div className="mt-4 mx-6 animate__animated animate__pulse  ">
 				<img src={image} alt="Enter Student Details" />
 			</div>
-			<div className="max-w-3xl lg:max-w-2xl md:max-w-xl md:mx-auto md:mt-5 md:mb-20 p-5 rounded-2xl shadow-2xl shadow-black animate__animated animate__fadeIn">
+			<div className="max-w-3xl lg:max-w-2xl md:max-w-xl md:mx-auto md:mt-6 md:mb-7 p-5 rounded-2xl shadow-2xl shadow-black animate__animated animate__fadeIn">
 				<h2 className="text-3xl font-semibold my-5 mx-2 text-white">
 					Fill Details
 				</h2>
