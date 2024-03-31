@@ -2,7 +2,7 @@ const Footer = () => {
 	return (
 		<>
 			<footer
-				className="w-ful py-5 mt-16"
+				className="w-ful text-white py-3"
 				style={{ backgroundColor: "rgb(13, 18, 26)" }}
 			>
 				<div
@@ -10,7 +10,7 @@ const Footer = () => {
 					style={{ color: "rgb(156 163 175)" }}
 				>
 					<div className="flex justify-between items-center">
-						<p className="text-xs">
+						<p className="text-sm">
 							&copy; 2024 Your Company Name. All rights reserved.
 						</p>
 						<div className="flex gap-5">

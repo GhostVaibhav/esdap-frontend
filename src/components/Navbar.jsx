@@ -11,7 +11,7 @@ const Navbar = () => {
 				<nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
 					<a
 						className="flex-none text-xl font-semibold dark:text-white"
-						href="/home"
+						href="/"
 					>
 						ESDAP
 					</a>
