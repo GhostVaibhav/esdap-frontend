@@ -30,13 +30,13 @@ const Navbar = () => {
 						<a
 							className={`font-medium `}
 							style={{
-								color: isActiveLink("/admin")
+								color: isActiveLink("/login")
 									? "rgb(59 130 246)"
 									: "rgb(156 163 175)",
 							}}
-							href="/admin"
+							href="/login"
 						>
-							Admin
+							Login
 						</a>
 						<a
 							className={`font-medium `}

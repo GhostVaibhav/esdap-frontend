@@ -2,7 +2,7 @@ const Footer = () => {
 	return (
 		<>
 			<footer
-				className="w-ful text-white py-3"
+				className="w-ful text-white py-4"
 				style={{ backgroundColor: "rgb(13, 18, 26)" }}
 			>
 				<div
@@ -14,13 +14,22 @@ const Footer = () => {
 							&copy; 2024 Your Company Name. All rights reserved.
 						</p>
 						<div className="flex gap-5">
-							<a href="/" className="text-xs underline hover:text-blue-400">
+							<a
+								href="/"
+								className="text-xs underline hover:text-blue-400"
+							>
 								Privacy Policy
 							</a>
-							<a href="/" className="text-xs underline hover:text-blue-400">
+							<a
+								href="/"
+								className="text-xs underline hover:text-blue-400"
+							>
 								Terms of Service
 							</a>
-							<a href="/" className="text-xs underline hover:text-blue-400">
+							<a
+								href="/"
+								className="text-xs underline hover:text-blue-400"
+							>
 								Contact Us
 							</a>
 						</div>
