@@ -1,6 +1,23 @@
+import { getSHA256Hash } from "boring-webcrypto-sha256";
+
 const handleSubmit = async (e) => {
 	e.preventDefault();
 	try {
+		let username = document.getElementById("academicScores").value;
+		let password = document.getElementById("password").value;
+		
+		let hash = await getSHA256Hash(username + "@" + password);
+		
+		const response = await fetch("http://localhost:4000/esdap/v1/login/signin", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ credentials: hash }),
+		});
+		
+		const data = await response.json();
+		console.log(data);
 	} catch (error) {
 		console.error("Error submitting data:", error);
 	}
@@ -25,10 +42,9 @@ const LoginCard = () => {
 								<input
 									type="text"
 									id="academicScores"
-									// value={academicScores}
-									onChange={(e) => {}}
+									onChange={(e) => { }}
 									className="w-full px-4 py-2  rounded-3xl focus:outline-none "
-									placeholder="username"
+									placeholder="Username"
 								/>
 							</div>
 							<div className="my-4 mx-2">
@@ -39,10 +55,9 @@ const LoginCard = () => {
 									Password:
 								</label>
 								<input
-									type="text"
-									id="attendancePercentage"
-									// value={username}
-									onChange={(e) => {}}
+									type="password"
+									id="password"
+									onChange={(e) => { }}
 									className="w-full px-4 py-2 border rounded-3xl focus:outline-none "
 									placeholder="******"
 								/>
@@ -53,7 +68,6 @@ const LoginCard = () => {
 					<button
 						type="submit"
 						className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-2xl focus:outline-none"
-						// onClick={handleSubmit}
 					>
 						Submit
 					</button>
