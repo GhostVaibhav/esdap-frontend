@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
 	return (
 		<>
@@ -14,24 +16,30 @@ const Footer = () => {
 							&copy; 2024 ESDAP. All rights reserved.
 						</p>
 						<div className="flex gap-5">
-							<a
-								href="/"
-								className="text-xs underline hover:text-blue-400"
-							>
-								Privacy Policy
-							</a>
-							<a
-								href="/"
-								className="text-xs underline hover:text-blue-400"
-							>
-								Terms of Service
-							</a>
-							<a
-								href="/"
-								className="text-xs underline hover:text-blue-400"
-							>
-								Contact Us
-							</a>
+							<Link to="/">
+								<span
+									href="/"
+									className="text-xs underline hover:text-blue-400"
+								>
+									Privacy Policy
+								</span>
+							</Link>
+							<Link to="/">
+								<span
+									href="/"
+									className="text-xs underline hover:text-blue-400"
+								>
+									Terms of Service
+								</span>
+							</Link>
+							<Link to="/">
+								<span
+									href="/"
+									className="text-xs underline hover:text-blue-400"
+								>
+									Contact Us
+								</span>
+							</Link>
 						</div>
 					</div>
 				</div>

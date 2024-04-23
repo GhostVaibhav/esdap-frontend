@@ -4,8 +4,6 @@ import Footer from "../components/Footer";
 import LoginCard from "../components/LoginCard";
 import Navbar from "../components/Navbar";
 
-import { useState } from "react";
-
 function LoginWindow() {
 	return (
 		<>
