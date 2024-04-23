@@ -38,7 +38,6 @@ const Navbar = () => {
 										? "rgb(59 130 246)"
 										: "rgb(156 163 175)",
 								}}
-								href="/login"
 							>
 								Login
 							</span>
@@ -62,7 +61,6 @@ const Navbar = () => {
 										? "rgb(59 130 246)"
 										: "rgb(156 163 175)",
 								}}
-								href="/about"
 							>
 								About us
 							</span>
