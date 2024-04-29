@@ -14,7 +14,6 @@ export const RenderRoutes = () => {
                     return <Route key={i} path={r.path} element={r.element} />
                 } else return false
             })}
-
         </Routes>
     )
 }
@@ -67,7 +66,7 @@ export const RenderMenu = () => {
                     })}
 
                     {user.isAuthenticated ?
-                        <Link to={''} onClick={logout}>
+                        <Link to={'#'} onClick={logout}>
                             <span
                                 className={`font-medium `}
                                 style={{
@@ -80,7 +79,7 @@ export const RenderMenu = () => {
                             </span>
                         </Link>
                         :
-                        <Link to={'login'}>
+                        <Link to={'/login'}>
                             <span
                                 className={`font-medium `}
                                 style={{

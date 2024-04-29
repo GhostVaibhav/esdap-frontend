@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 const AuthContext = createContext();
 export const AuthData = () => useContext(AuthContext);
 
-
 export const AuthWrapper = () => {
     const [user, setUser] = useState({ name: "", isAuthenticated: false })
 
@@ -22,11 +21,14 @@ export const AuthWrapper = () => {
                 body: JSON.stringify({ credentials: hash }),
             });
             
-            const data = await response.json();
-            
-            if (data.login == "true") {
+            var data = await response.json();
+            data = JSON.stringify(data)
+            data = JSON.parse(data)
+
+            if (data.login === true) {
                 setUser({ name: username, isAuthenticated: true })
-            }            
+                console.log("Authenticated the user")
+            }
         } catch (error) {
             console.error("Error submitting data:", error);
         }

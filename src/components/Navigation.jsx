@@ -9,5 +9,5 @@ export const nav = [
      { path:     "/login",    name: "Login",       element: <LoginCard />,      isMenu: false,    isPrivate: false  },
      { path:     "/faq",  name: "FAQ",     element: <FAQCard />,    isMenu: true,     isPrivate: false  },
      { path:     "/result",  name: "Result",     element: <ResultCard />,    isMenu: true,     isPrivate: true  },
-     { path:     "/details",  name: "Details",     element: <StudentDetailsForm />,    isMenu: true,     isPrivate: true  },
+     { path:     "/details",  name: "Details",     element: <StudentDetailsForm />,    isMenu: true,     isPrivate: true  }
 ]

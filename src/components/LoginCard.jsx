@@ -11,9 +11,6 @@ const LoginCard = () => {
 	const doLogin = async (e) => {
 		e.preventDefault()
 		try {
-			let username = document.getElementById("academicScores").value;
-			let password = document.getElementById("password").value;
-			setFormData({ userName: username, password: password })
 			await login(formData.userName, formData.password)
 			navigate("/details")
 		} catch (error) {
@@ -40,9 +37,10 @@ const LoginCard = () => {
 								<input
 									type="text"
 									id="academicScores"
-									onChange={(e) => { }}
+									onChange={(e) => setFormData({userName: e.target.value})}
 									className="w-full px-4 py-2  rounded-3xl focus:outline-none "
 									placeholder="Username"
+									value={formData.userName}
 								/>
 							</div>
 							<div className="my-4 mx-2">
@@ -55,9 +53,10 @@ const LoginCard = () => {
 								<input
 									type="password"
 									id="password"
-									onChange={(e) => { }}
+									onChange={(e) => setFormData({password: e.target.value})}
 									className="w-full px-4 py-2 border rounded-3xl focus:outline-none "
 									placeholder="******"
+									value={formData.password}
 								/>
 							</div>
 						</div>
