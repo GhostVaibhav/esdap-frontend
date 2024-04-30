@@ -69,7 +69,7 @@ const LoginCard = () => {
 						Submit
 					</button>
 					{errorMessage ?
-						<div className="error">{errorMessage}</div>
+						<div className="mx-2 p-2 text-white text-center bg-red-600 rounded-b-xl">{errorMessage}</div>
 						: null}
 				</form>
 			</div>
