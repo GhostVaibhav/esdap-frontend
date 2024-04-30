@@ -27,10 +27,15 @@ export const AuthWrapper = () => {
 
             if (data.login === true) {
                 setUser({ name: username, isAuthenticated: true })
-                console.log("Authenticated the user")
+            }
+            else if(data.login === false) {
+                throw ("Incorrect Credentials")
+            }
+            else {
+                throw ("Invalid Response")
             }
         } catch (error) {
-            console.error("Error submitting data:", error);
+            throw(error)
         }
     }
 
@@ -40,7 +45,7 @@ export const AuthWrapper = () => {
 
     return (
         <AuthContext.Provider value={{ user, login, logout }}>
-            <div className="min-h-screen dark:bg-gray-900"
+            <div className="min-h-screen dark:bg-gray-900 flex flex-col"
                 style={{ fontFamily: "Poppins" }}>
                 <RenderMenu />
                 <RenderRoutes />
