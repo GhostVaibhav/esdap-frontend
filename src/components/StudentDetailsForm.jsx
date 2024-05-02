@@ -6,6 +6,7 @@ import image from "../images/your-paragraph-text.png";
 import "animate.css";
 import { useRecoilState } from "recoil";
 import {
+	nameAtom,
 	academicScoresAtom,
 	attendancePercentageAtom,
 	extracurricularActivitiesAtom,
@@ -38,6 +39,9 @@ const StudentDetailsForm = () => {
 	const [researchExperience, setResearchExperience] = useRecoilState(
 		researchExperienceAtom
 	);
+	const [fullName, setFullName] = useRecoilState(
+		nameAtom
+	);
 
 	const [finalScore, setFinalScore] = useRecoilState(finalScoreAtom);
 
@@ -47,6 +51,7 @@ const StudentDetailsForm = () => {
 			const response = await axios.post(
 				`${BACKEND_URL}/esdap/v1/backend/data`,
 				{
+					fullName,
 					academicScores,
 					attendancePercentage,
 					extracurricularActivities,
@@ -76,6 +81,24 @@ const StudentDetailsForm = () => {
 				<form onSubmit={handleSubmit}>
 					<div className="flex flex-col md:flex-row">
 						<div className="">
+							<div className="my-4 mx-2">
+								<label
+									htmlFor="fullName"
+									className="block text-sm mb-1 text-slate-300 "
+								>
+									Name:
+								</label>
+								<input
+									type="text"
+									id="fullName"
+									value={fullName}
+									onChange={(e) => {
+										setFullName(e.target.value);
+									}}
+									className="w-full px-4 py-2  rounded-3xl focus:outline-none "
+									placeholder="Student name here"
+								/>
+							</div>
 							<div className="my-4 mx-2">
 								<label
 									htmlFor="academicScores"
@@ -142,28 +165,6 @@ const StudentDetailsForm = () => {
 									className="w-full px-4 py-2 border rounded-3xl focus:outline-none "
 									placeholder="99,92,89"
 								></input>
-							</div>
-							<div className="my-4 mx-2">
-								<label
-									htmlFor="basicFitnessScores"
-									className="block text-sm mb-1 text-slate-300"
-								>
-									Basic Fitness Scores:
-								</label>
-								<input
-									type="text"
-									id="basicFitnessScores"
-									value={basicFitnessScores}
-									onChange={(e) => {
-										const inputString = e.target.value;
-										const numberArray = inputString
-											.split(",")
-											.map(Number);
-										setBasicFitnessScores(numberArray);
-									}}
-									className="w-full px-4 py-2 border rounded-3xl focus:outline-none "
-									placeholder="99,92,89,78"
-								/>
 							</div>
 						</div>
 						<div className="">
@@ -232,6 +233,28 @@ const StudentDetailsForm = () => {
 									}}
 									className="w-full px-4 py-2 border rounded-3xl focus:outline-none "
 									placeholder="3"
+								/>
+							</div>
+							<div className="my-4 mx-2">
+								<label
+									htmlFor="basicFitnessScores"
+									className="block text-sm mb-1 text-slate-300"
+								>
+									Basic Fitness Scores:
+								</label>
+								<input
+									type="text"
+									id="basicFitnessScores"
+									value={basicFitnessScores}
+									onChange={(e) => {
+										const inputString = e.target.value;
+										const numberArray = inputString
+											.split(",")
+											.map(Number);
+										setBasicFitnessScores(numberArray);
+									}}
+									className="w-full px-4 py-2 border rounded-3xl focus:outline-none "
+									placeholder="99,92,89,78"
 								/>
 							</div>
 						</div>

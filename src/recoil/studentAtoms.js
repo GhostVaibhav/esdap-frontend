@@ -38,8 +38,13 @@ export const finalScoreAtom = atom({
 	key: "finalScore",
 	default: "",
 });
+export const nameAtom = atom({
+	key: "name",
+	default: "",
+});
 
 export const atoms = {
+	nameAtom,
 	academicScoresAtom,
 	attendancePercentageAtom,
 	extracurricularActivitiesAtom,

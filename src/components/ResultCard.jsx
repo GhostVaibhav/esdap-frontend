@@ -3,6 +3,7 @@ import { useRecoilValue } from "recoil";
 import { atoms } from "../recoil/studentAtoms.js";
 
 const {
+	nameAtom,
 	academicScoresAtom,
 	attendancePercentageAtom,
 	extracurricularActivitiesAtom,
@@ -15,6 +16,7 @@ const {
 
 const ResultCard = () => {
 	// Use useRecoilValue hook to access Recoil states
+	const name = useRecoilValue(nameAtom);
 	const academicScores = useRecoilValue(academicScoresAtom);
 	const attendancePercentage = useRecoilValue(attendancePercentageAtom);
 	const extracurricularActivities = useRecoilValue(
@@ -55,6 +57,16 @@ const ResultCard = () => {
 				<div className="max-w-xl lg:max-w-xl md:max-w-lg md:my-20  p-10 px-10 m-10 rounded-2xl shadow-2xl shadow-black animate__animated animate__fadeIn">
 					<div className="text-2xl font-bold mb-6 text-white text-center">
 						Result Score Dashboard
+					</div>
+
+					{/* Name */}
+					<div className="flex flex-row justify-between  mb-4">
+						<h3 className="text-sm text-slate-300">
+							Name -
+						</h3>
+						<span className="text-sm text-white ml-12 ">
+							{name}
+						</span>
 					</div>
 
 					{/* Academic Scores */}
